@@ -1,6 +1,6 @@
 function maxLengthCheck(object) {
-    if (object.value.length > object.maxLength)
-        object.value = object.value.slice(0, object.maxLength)
+    if (object.value.length > 3)
+        object.value = object.value.slice(0, 3)
 }
 var cc = myform.cardcode;
 for (var i in ['input', 'change', 'blur', 'keyup']) {
