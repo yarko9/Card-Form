@@ -156,20 +156,31 @@ body, * {
   color: $main-clr;
   text-align: center;
   width: 40px;
-  height: 23px;
+  height: 25px;
 }
 .card-label {
   font-weight: 100;
   font-size: 11px;
   color: lighten($font-clr, 35%);
 }
-.expiration-select {
-  height: 25px;
-  width: 70px;
-  padding-left: 5px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.card-expiration:first-of-type {
+  position: relative;
+  height: 45px;
+  width: 150px;
+  .expiration-select {
+    height: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:first-of-type{
+      padding-left: 5px;
+      width: 80px;
+    }
+    &:last-of-type {
+      position: absolute;
+      width: 50px;
+    }
+  }
 }
 .card-form-number > .card-input {
   width: 225px;
