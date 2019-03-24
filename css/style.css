@@ -179,4 +179,27 @@ body, * {
   bottom: 0;
   font-weight: 600; }
 
+@media (max-width: 645px) {
+  .payment__wrapper {
+    padding: 20px; }
+
+  .payment__check {
+    padding-right: 0; }
+
+  .payment__card {
+    position: static;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .payment__check-complete, .payment__check-items, .payment__check-complete, .payment__card {
+    margin-top: 20px; } }
+@media (max-width: 490px) {
+  .payment__wrapper {
+    width: 350px; }
+
+  .form__wrapper::before {
+    border-width: 150px 93vw 0 0; }
+  .form__wrapper::after {
+    border-width: 0 0 150px 93vw; } }
+
 /*# sourceMappingURL=style.css.map */
