@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Incora</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page__wrapper">
+        <div class="form__wrapper">
+            <form name="myform">
+                <div class="container">
+                    <div class="payment__wrapper">
+                        <div class="payment__check">
+                            <div class="payment__check-total">
+                                <p class="check-heading">TOTAL</p>
+                                <p class="check-price">$898</p>
+                            </div>
+                            <div class="payment__check-items">
+                                <p class="check-heading">DETAIL</p>
+                                <div class="check-item">
+                                    <p class="item-name">iPad Pro</p>
+                                    <p class="item-price">$799</p>
+                                </div>
+                                <div class="check-item">
+                                    <p class="item-name">Apple Pencil</p>
+                                    <p class="item-price">$99</p>
+                                </div>
+                            </div>
+                            <div class="payment__check-complete">
+                                <input type="submit" value="PAY NOW" class="complete-button" id="check">
+                            </div>
+                            <div class="payment__card">
+                                <div class="payment__card-holder">
+                                    <p class="holder-name">Carly Ling</p>
+                                    <img src="css/img/visa_logo.png" alt="Visa" class="card-logo logo-hidden" id="visa-logo">
+                                    <img src="css/img/mc_logo.png" alt="Visa" class="card-logo logo-hidden " id="mc-logo">
+                                </div>
+                                <div class="payment__card-form">
+                                    <div class="card-number">
+                                        <label class="card-label">Credit Card Number</label>
+                                        <input oninput="cardNumberValidator()" autocomplete="off" name="cardcode" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" class="card-input" id="creditCardField" placeholder="XXXX XXXX XXXX XXXX" required>
+                                        <div class="card-error error-hidden" id="number-error">Card number is incorrect or not supported</div>
+                                    </div>
+                                    <div class="card-information">
+                                        <div class="card-expiration">
+                                            <label class="card-label">Expiration</label><br>
+                                            <select class="expiration-select">
+                                                <option value="01">January</option>
+                                                <option value="02">February </option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                            <select class="expiration-select">
+                                                <option value="19"> 2019</option>
+                                                <option value="20"> 2020</option>
+                                                <option value="21"> 2021</option>
+                                                <option value="22"> 2022</option>
+                                                <option value="23"> 2023</option>
+                                                <option value="24"> 2024</option>
+                                                <option value="25"> 2025</option>
+                                                <option value="26"> 2026</option>
+                                                <option value="27"> 2027</option>
+                                            </select>
+                                        </div>
+                                        <div class="card-expiration">
+                                            <label class="card-label">CCV</label><br>
+                                            <input oninput="maxLengthCheck(this)" type = "number" maxlength = "3" class="expiration-ccv card-input" placeholder="123" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+<script src="js/index.js"></script>
+</body>
+</html>

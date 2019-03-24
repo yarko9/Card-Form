@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+$main-clr: rgb(255,255,255);
+$secondary-clr: rgb(12,132,252);
+$box-shadow-clr: rgba(0, 0, 0, 0.8);
+$font-clr: rgb(117,117,117);
+$error-message-clr: rgb(211,38,38); 
+
+body, * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+.page__wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form__wrapper {
+  position: relative;
+  background-color: $secondary-clr;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    border-style: solid;
+    border-width: 210px 96vw 0 0;
+    border-color: $main-clr transparent;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 0 0 210px 96vw;
+    border-color: $main-clr transparent;
+  }
+}
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.payment__wrapper {
+  position: relative;
+  border: 1px solid transparent;
+  box-shadow: 0 0 20px $box-shadow-clr;
+  z-index: 5;
+  background-color: $main-clr;
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 7px;
+}
+.payment__check {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  padding-right: 250px;
+  font-size: 16px;
+  position: relative;
+}
+.payment__check-items, .payment__check-complete {
+  margin-top: 40px;
+}
+.check-heading {
+  color: $font-clr;
+}
+.check-price {
+  font-size: 24px;
+}
+.item-price, .check-price {
+  color: $secondary-clr;
+  font-weight: 700;
+}
+.check-item {
+  display: flex;
+  justify-content: space-between;
+  color: darken($font-clr, 25%);
+}
+.complete-button {
+  position: relative;
+  padding: 5px 35px;
+  border-radius: 30px;
+  border: 1px solid $secondary-clr;
+  color: $secondary-clr;
+  background-color: $main-clr;
+  &:hover {
+    color: $main-clr;
+    background-color: $secondary-clr;
+    border: 1px solid transparent;
+    transition: 0.4s ease-in;
+    cursor: pointer;
+  }
+}
+.payment__card {
+  position: absolute;
+  width: 340px;
+  box-sizing: border-box;
+  height: 217px;
+  margin-left: 20px;
+  padding: 0px 20px 10px 20px;
+  right: -100px;
+  background-color: lighten($secondary-clr, 7%);
+  color: $main-clr;
+  border-radius: 7px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 0 20px $box-shadow-clr;
+}
+.card-logo {
+  width: 50px;
+  height: auto;
+}
+.logo-hidden, .error-hidden {
+  display: none;
+}
+.payment__card-holder, .card-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment__card-holder {
+  height: 50px;
+}
+.card-number {
+  padding-bottom: 20px;
+  position: relative;
+}
+.payment__card-form {
+  .card-input, .expiration-select {
+    background-color: lighten($secondary-clr, 11%);
+    border: 0px solid transparent;
+    color: $main-clr;
+    text-align: center;
+  }
+}
+.expiration-ccv {
+  background-color: lighten($secondary-clr, 11%);
+  border: 0px solid transparent;
+  color: $main-clr;
+  text-align: center;
+  width: 40px;
+  height: 23px;
+}
+.card-label {
+  font-weight: 100;
+  font-size: 11px;
+  color: lighten($font-clr, 35%);
+}
+.expiration-select {
+  height: 25px;
+  width: 70px;
+  padding-left: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.card-number > .card-input {
+  width: 225px;
+  height: 28px;
+  font-size: 16px;
+}
+.card-input {
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+  &::placeholder {
+    color: $main-clr;
+  }
+}
+.card-error {
+  font-size: 13px;
+  color: $error-message-clr;
+  position: absolute;
+  bottom: 0;
+  font-weight: 600;
+}
