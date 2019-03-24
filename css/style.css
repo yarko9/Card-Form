@@ -2,7 +2,8 @@
 body, * {
   margin: 0;
   padding: 0;
-  font-family: 'Varela Round', sans-serif; }
+  font-family: 'Varela Round', sans-serif;
+  outline: none; }
 
 .page__wrapper {
   height: 100vh;
@@ -41,6 +42,7 @@ body, * {
 .container {
   max-width: 1100px;
   margin-left: auto;
+  padding: 0 10px;
   margin-right: auto; }
 
 .payment__wrapper {
@@ -49,7 +51,7 @@ body, * {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   z-index: 5;
   background-color: white;
-  width: 430px;
+  max-width: 430px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -87,6 +89,7 @@ body, * {
   position: relative;
   padding: 5px 35px;
   border-radius: 30px;
+  transition: 0.4s ease-in;
   border: 1px solid #0c84fc;
   color: #0c84fc;
   background-color: white; }
@@ -94,12 +97,11 @@ body, * {
     color: white;
     background-color: #0c84fc;
     border: 1px solid transparent;
-    transition: 0.4s ease-in;
     cursor: pointer; }
 
 .payment__check-card {
   position: absolute;
-  width: 340px;
+  max-width: 340px;
   box-sizing: border-box;
   height: 217px;
   margin-left: 20px;
@@ -118,7 +120,7 @@ body, * {
   width: 50px;
   height: auto; }
 
-.logo-hidden, .error-hidden {
+.hidden {
   display: none; }
 
 .card-holder, .card-form-information {
@@ -130,7 +132,7 @@ body, * {
   height: 50px; }
 
 .card-form-number {
-  padding-bottom: 20px;
+  padding-bottom: 26px;
   position: relative; }
 
 .card-form .card-input, .card-form .expiration-select {
@@ -153,7 +155,6 @@ body, * {
   color: #cecece; }
 
 .card-expiration:first-of-type {
-  position: relative;
   height: 45px;
   width: 150px; }
   .card-expiration:first-of-type .expiration-select {
@@ -162,11 +163,13 @@ body, * {
     -moz-appearance: none;
     appearance: none; }
     .card-expiration:first-of-type .expiration-select:first-of-type {
-      padding-left: 5px;
-      width: 80px; }
+      padding-left: 20px;
+      max-width: 100px; }
     .card-expiration:first-of-type .expiration-select:last-of-type {
-      position: absolute;
       width: 50px; }
+
+.card-expiration-date {
+  display: flex; }
 
 .card-form-number > .card-input {
   width: 225px;
@@ -178,7 +181,8 @@ body, * {
 .card-input[type='number'] {
   -moz-appearance: textfield; }
 .card-input::placeholder {
-  color: white; }
+  color: white;
+  opacity: 0.4; }
 
 .card-error {
   font-size: 13px;
@@ -206,11 +210,18 @@ body, * {
     margin-top: 20px; } }
 @media (max-width: 490px) {
   .payment__wrapper {
-    width: 350px; }
+    max-width: 350px;
+    padding: 20px 5px; }
 
   .form__wrapper::before {
     border-width: 150px 93vw 0 0; }
   .form__wrapper::after {
-    border-width: 0 0 150px 93vw; } }
+    border-width: 0 0 150px 93vw; }
+
+  .card-form-number > .card-input {
+    max-width: 215px; }
+
+  .card-error {
+    font-size: 11px; } }
 
 /*# sourceMappingURL=style.css.map */

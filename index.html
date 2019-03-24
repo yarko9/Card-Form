@@ -10,7 +10,7 @@
 <body>
     <div class="page__wrapper">
         <div class="form__wrapper">
-            <form name="myform">
+            <form name="myform" class="card-form">
                 <div class="container">
                     <div class="payment__wrapper">
                         <div class="payment__check">
@@ -35,43 +35,45 @@
                             <div class="payment__check-card">
                                 <div class="card-holder">
                                     <p class="card-holder-name">Carly Ling</p>
-                                    <img src="css/img/visa_logo.png" alt="Visa" class="card-logo logo-hidden" id="visa-logo">
-                                    <img src="css/img/mc_logo.png" alt="Visa" class="card-logo logo-hidden " id="mc-logo">
+                                    <img src="css/img/visa_logo.png" alt="Visa" class="card-logo hidden" id="visa-logo">
+                                    <img src="css/img/mc_logo.png" alt="Visa" class="card-logo hidden " id="mc-logo">
                                 </div>
                                 <div class="card-form">
                                     <div class="card-form-number">
                                         <label class="card-label">Credit Card Number</label>
                                         <input oninput="cardNumberValidator()" autocomplete="off" name="cardcode" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" class="card-input" id="creditCardField" placeholder="XXXX XXXX XXXX XXXX" required>
-                                        <div class="card-error error-hidden" id="number-error">Card number is incorrect or not supported</div>
+                                        <div class="card-error hidden" id="number-error">Card number is incorrect or not supported</div>
                                     </div>
                                     <div class="card-form-information">
                                         <div class="card-expiration">
                                             <label class="card-label">Expiration</label><br>
-                                            <select class="expiration-select">
-                                                <option value="01">January</option>
-                                                <option value="02">February </option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05">May</option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                            <select class="expiration-select">
-                                                <option value="19"> 2019</option>
-                                                <option value="20"> 2020</option>
-                                                <option value="21"> 2021</option>
-                                                <option value="22"> 2022</option>
-                                                <option value="23"> 2023</option>
-                                                <option value="24"> 2024</option>
-                                                <option value="25"> 2025</option>
-                                                <option value="26"> 2026</option>
-                                                <option value="27"> 2027</option>
-                                            </select>
+                                            <div class="card-expiration-date">
+                                                <select class="expiration-select">
+                                                    <option value="01">January</option>
+                                                    <option value="02">February </option>
+                                                    <option value="03">March</option>
+                                                    <option value="04">April</option>
+                                                    <option value="05">May</option>
+                                                    <option value="06">June</option>
+                                                    <option value="07">July</option>
+                                                    <option value="08">August</option>
+                                                    <option value="09">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                                <select class="expiration-select">
+                                                    <option value="19"> 2019</option>
+                                                    <option value="20"> 2020</option>
+                                                    <option value="21"> 2021</option>
+                                                    <option value="22"> 2022</option>
+                                                    <option value="23"> 2023</option>
+                                                    <option value="24"> 2024</option>
+                                                    <option value="25"> 2025</option>
+                                                    <option value="26"> 2026</option>
+                                                    <option value="27"> 2027</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="card-expiration">
                                             <label class="card-label">CCV</label><br>
