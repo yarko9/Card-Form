@@ -106,7 +106,7 @@ body, * {
     cursor: pointer;
   }
 }
-.payment__card {
+.payment__check-card {
   position: absolute;
   width: 340px;
   box-sizing: border-box;
@@ -130,19 +130,19 @@ body, * {
 .logo-hidden, .error-hidden {
   display: none;
 }
-.payment__card-holder, .card-information {
+.card-holder, .card-form-information {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.payment__card-holder {
+.card-holder {
   height: 50px;
 }
-.card-number {
+.card-form-number {
   padding-bottom: 20px;
   position: relative;
 }
-.payment__card-form {
+.card-form {
   .card-input, .expiration-select {
     background-color: lighten($secondary-clr, 11%);
     border: 0px solid transparent;
@@ -171,7 +171,7 @@ body, * {
   -moz-appearance: none;
   appearance: none;
 }
-.card-number > .card-input {
+.card-form-number > .card-input {
   width: 225px;
   height: 28px;
   font-size: 16px;
@@ -206,12 +206,12 @@ body, * {
   .payment__check {
     padding-right: 0;
   }
-  .payment__card {
+  .payment__check-card {
     position: static;
     margin-left: auto;
     margin-right: auto;
   }
-  .payment__check-complete, .payment__check-items, .payment__check-complete, .payment__card {
+  .payment__check-complete, .payment__check-items, .payment__check-complete, .payment__check-card {
     margin-top: 20px;
   }
 }

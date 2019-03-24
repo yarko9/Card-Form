@@ -32,19 +32,19 @@
                             <div class="payment__check-complete">
                                 <input type="submit" value="PAY NOW" class="complete-button" id="check">
                             </div>
-                            <div class="payment__card">
-                                <div class="payment__card-holder">
-                                    <p class="holder-name">Carly Ling</p>
+                            <div class="payment__check-card">
+                                <div class="card-holder">
+                                    <p class="card-holder-name">Carly Ling</p>
                                     <img src="css/img/visa_logo.png" alt="Visa" class="card-logo logo-hidden" id="visa-logo">
                                     <img src="css/img/mc_logo.png" alt="Visa" class="card-logo logo-hidden " id="mc-logo">
                                 </div>
-                                <div class="payment__card-form">
-                                    <div class="card-number">
+                                <div class="card-form">
+                                    <div class="card-form-number">
                                         <label class="card-label">Credit Card Number</label>
                                         <input oninput="cardNumberValidator()" autocomplete="off" name="cardcode" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" class="card-input" id="creditCardField" placeholder="XXXX XXXX XXXX XXXX" required>
                                         <div class="card-error error-hidden" id="number-error">Card number is incorrect or not supported</div>
                                     </div>
-                                    <div class="card-information">
+                                    <div class="card-form-information">
                                         <div class="card-expiration">
                                             <label class="card-label">Expiration</label><br>
                                             <select class="expiration-select">
